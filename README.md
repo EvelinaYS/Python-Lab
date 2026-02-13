@@ -32,7 +32,7 @@
 
 ## Список использованных источников:
 
-1. https://evil-teacher.orbiter.website/prog_pm/lab00/
+1. [Лабораторная работа №0](https://evil-teacher.orbiter.website/prog_pm/lab00/)
 2. https://doka.guide/tools/markdown/
 3. https://github.com/still-coding/report_demo
 
