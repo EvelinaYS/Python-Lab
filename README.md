@@ -26,7 +26,7 @@
 
 Проверка на GitHub.
 
-<img width="773" height="349" alt="image" src="https://github.com/user-attachments/assets/56abe76e-2dd0-4f78-866e-f724173186c5" />
+<img width="631" height="327" alt="image" src="https://github.com/user-attachments/assets/e3d1538e-cfb4-454d-8c6c-311f11aaea57" />
 
 ---
 
