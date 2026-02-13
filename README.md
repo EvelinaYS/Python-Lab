@@ -1,6 +1,7 @@
 # Отчет 
 
 ## Задание (Rare)
+
 1. Создать репозиторий для дисциплины на GitHub.
 2. Склонировать репозиторий на ПК.
 3. Написать первую программу.
@@ -18,6 +19,7 @@
 ---
 
 ## Скриншоты результатов 
+
 1. Локальный запуск программы.
 <img width="304" height="116" alt="image" src="https://github.com/user-attachments/assets/7fd433e2-ece3-4469-ac75-5066f5231153" />
 
@@ -25,6 +27,14 @@
 
 2. Проверка на GitHub.
 <img width="773" height="349" alt="image" src="https://github.com/user-attachments/assets/56abe76e-2dd0-4f78-866e-f724173186c5" />
+
+---
+
+## Список использованных источников:
+
+1. https://evil-teacher.orbiter.website/prog_pm/lab00/
+2. https://doka.guide/tools/markdown/
+3. https://github.com/still-coding/report_demo
 
 
 
