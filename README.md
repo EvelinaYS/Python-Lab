@@ -8,7 +8,6 @@
 4. Запустить программу и убедиться в её работоспособности.
 5. Выполнить коммит и пуш.
 6. Оформить отчет в файле `README.md`.
-7. Добавить шпаргалку в отчет по работе с `git`.
 
 ---
 
@@ -33,8 +32,8 @@
 ## Список использованных источников:
 
 1. [Лабораторная работа №0](https://evil-teacher.orbiter.website/prog_pm/lab00/)
-2. https://doka.guide/tools/markdown/
-3. https://github.com/still-coding/report_demo
+2. [Справка по markdown](https://doka.guide/tools/markdown/)
+3. [Пример отчета](https://github.com/still-coding/report_demo)
 
 
 
