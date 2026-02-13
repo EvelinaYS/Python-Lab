@@ -20,6 +20,7 @@
 ## Скриншоты результатов 
 1. Локальный запуск программы.
 <img width="304" height="116" alt="image" src="https://github.com/user-attachments/assets/7fd433e2-ece3-4469-ac75-5066f5231153" />
+
 <img width="228" height="163" alt="image" src="https://github.com/user-attachments/assets/9c95c090-9951-4e1d-8c33-ce0825532dbb" />
 
 2. Проверка на GitHub.
