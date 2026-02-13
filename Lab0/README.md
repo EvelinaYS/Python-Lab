@@ -35,6 +35,3 @@
 1. [Лабораторная работа №0](https://evil-teacher.orbiter.website/prog_pm/lab00/)
 2. [Справка по markdown](https://doka.guide/tools/markdown/)
 3. [Пример отчета](https://github.com/still-coding/report_demo)
-
-
-
