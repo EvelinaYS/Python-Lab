@@ -1,0 +1,24 @@
+Index: test.py
+===================================================================
+diff --git a/test.py b/test.py
+deleted file mode 100644
+--- a/test.py	(revision 7922a6ee248cca4b3ec4360fd33b00284142dac1)
++++ /dev/null	(revision 7922a6ee248cca4b3ec4360fd33b00284142dac1)
+@@ -1,1 +0,0 @@
+-print("Hello!")
+Index: Lab0/test.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Lab0/test.py b/Lab0/test.py
+new file mode 100644
+--- /dev/null	(date 1770967226889)
++++ b/Lab0/test.py	(date 1770967226889)
+@@ -0,0 +1,2 @@
++print("Hello!")
++print("Hello")
+\ No newline at end of file
+diff --git a/README.md b/Lab0/README.md
+rename from README.md
+rename to Lab0/README.md
