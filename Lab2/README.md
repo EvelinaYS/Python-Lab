@@ -302,7 +302,7 @@ plt.show()
 
 ### 3.5. Результат работы программы
 
-![img.png](img.png)
+![img.png](img/graph.png)
 
 ---
 
