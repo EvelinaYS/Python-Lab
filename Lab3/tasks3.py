@@ -1,20 +1,19 @@
-def find_numbers():
-    found_numbers = []
-    count = 0
-    for n in range(452022, 1000000):
+def task3():
+    result = []
+    n = 452022
+
+    while len(result) < 5:
         div = []
-        for j in range(2,n):
+        for j in range(2, n):
             if n % j == 0:
                 div.append(j)
-                if len(div) >= 2:
-                    m = div[0] + div[-1]
-        if m % 7 == 3:
-            count += 1
-            found_numbers.append((n , m))
-        if count == 5:
-            break
-    return found_numbers
+        if len(div) > 0:
+            m = min(div) + max(div)
+            if m % 7 == 3:
+                result.append((n, m))
+        n += 1
+    return result
 
-result = find_numbers()
-for n, m in result:
+res = task3()
+for n, m in res:
     print(n, m)

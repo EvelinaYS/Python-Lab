@@ -8,6 +8,11 @@
 2. Оформить отчёт в README.md.
 
 ---
+## Требования и ограничения
+
+Решения задач оформить в виде функций, возвращающих ответы. Для решения первой задачи использовать `itertools`.
+
+---
 
 # Условия задач
 
@@ -42,15 +47,15 @@
 ```python
 from itertools import product
 
-def count_codes():
+def task1():
     letters = ['Н', 'А', 'С', 'Т', 'Я']
     count = 0
-    for letter in product(letters, repeat=6):
+    for letter in product(letters, repeat = 6):
         if letter.count('А') <= 1 and letter.count('Я') <= 1:
             count += 1
     return count
 
-result = count_codes()
+result = task1()
 print(result)
 ```
 ## Задача №2
@@ -60,47 +65,48 @@ print(result)
 ## Код решения:
 
 ```python
-s = 16**18 * 4**10 - 46 - 16
+def task2():
+    n = 16 ** 18 * 4 ** 10 - 46 - 16
 
-def count_digits_3():
     count = 0
-    n = s
     while n > 0:
         if n % 4 == 3:
             count += 1
         n = n // 4
     return count
 
-result = count_digits_3()
+result = task2()
 print(result)
 ```
 
 ## Задача №3
 
-Для чисел, начиная с 452022 (строго больше 452021), производится поиск всех делителей (кроме 1 и самого числа). Если делителей найдено не менее двух, то минимальный и максимальный из них складываются. Затем проверяется условие: остаток от деления этой суммы на 7 равен 3. Выводятся первые 5 таких чисел.
+Для чисел, начиная с 452022 (строго больше 452021), производится перебор. Для каждого числа находится список всех делителей (кроме 1 и самого числа). Делители ищутся перебором чисел от 2 до n−1. Если делители найдены (их хотя бы один), то определяется минимальный и максимальный из них, после чего вычисляется их сумма:
+`M = min + max`.
+
+Далее проверяется условие: остаток от деления M на 7 равен 3. Если условие выполняется, число и значение M сохраняются. Поиск продолжается до тех пор, пока не будет найдено 5 таких чисел. После этого работа программы прекращается.
 
 ## Код решения:
 
 ```python
-def find_numbers():
-    found_numbers = []
-    count = 0
-    for n in range(452022, 1000000):
+def task3():
+    result = []
+    n = 452022
+
+    while len(result) < 5:
         div = []
-        for j in range(2,n):
+        for j in range(2, n):
             if n % j == 0:
                 div.append(j)
-                if len(div) >= 2:
-                    m = div[0] + div[-1]
-        if m % 7 == 3:
-            count += 1
-            found_numbers.append((n , m))
-        if count == 5:
-            break
-    return found_numbers
+        if len(div) > 0:
+            m = min(div) + max(div)
+            if m % 7 == 3:
+                result.append((n, m))
+        n += 1
+    return result
 
-result = find_numbers()
-for n, m in result:
+res = task3()
+for n, m in res:
     print(n, m)
 ```
 
