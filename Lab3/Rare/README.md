@@ -130,9 +130,9 @@ for n, m in res:
 
 # Список использованных источников:
 
-1. [Лабораторная работа №3](https://evil-teacher.orbiter.website/prog_pm/lab03/)
-2. [Itertools в Python - Хабр](https://habr.com/ru/companies/otus/articles/529356/)
-3. [itertools — Functions creating iterators for efficient looping](https://docs.python.org/3/library/itertools.html)
-4. [Итерируем правильно: 20 приемов использования в Python модуля itertools](https://proglib.io/p/iteriruemsya-pravilno-20-priemov-ispolzovaniya-v-python-modulya-itertools-2020-01-03)
+1. [Лабораторная работа №3](https://evil-teacher.orbiter.website/prog_pm/lab03/).
+2. [Itertools в Python - Хабр](https://habr.com/ru/companies/otus/articles/529356/).
+3. [itertools — Functions creating iterators for efficient looping](https://docs.python.org/3/library/itertools.html).
+4. [Итерируем правильно: 20 приемов использования в Python модуля itertools](https://proglib.io/p/iteriruemsya-pravilno-20-priemov-ispolzovaniya-v-python-modulya-itertools-2020-01-03).
 
 
