@@ -2,7 +2,6 @@ import tkinter as tk
 import calendar
 from datetime import datetime
 
-# Цвета интерфейса
 BG_COLOR = "#0f172a"
 CARD_COLOR = "#1e293b"
 GREEN = "#4ade80"
@@ -10,7 +9,6 @@ RED = "#ff6b6b"
 WHITE = "white"
 HOLIDAY = "#f59e0b"
 
-# Названия месяцев
 months = [
     "Январь", "Февраль", "Март",
     "Апрель", "Май", "Июнь",
@@ -18,10 +16,8 @@ months = [
     "Октябрь", "Ноябрь", "Декабрь"
 ]
 
-# Дни недели
 days = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
 
-# Праздники
 holidays = {
     (1, 1): "🎄 Новый год",
     (2, 23): "🛡 День защитника Отечества",
@@ -32,25 +28,20 @@ holidays = {
     (11, 4): "✨ День народного единства"
 }
 
-# Текущая дата
 now = datetime.now()
 current_month = now.month
 current_year = now.year
 
-# Функция рисования календаря
 def draw_calendar():
     global current_month, current_year
 
-    # Удаляем старый календарь
     for widget in calendar_frame.winfo_children():
         widget.destroy()
 
-    # Показываем месяц и год
     title_label.config(
         text=f"{months[current_month - 1]} {current_year}"
     )
 
-    # Создаем дни недели
     for col, day in enumerate(days):
         label = tk.Label(
             calendar_frame,
@@ -64,7 +55,6 @@ def draw_calendar():
 
         label.grid(row=0, column=col, padx=2, pady=2)
 
-    # Получаем календарь месяца
     cal = calendar.monthcalendar(
         current_year,
         current_month
@@ -72,11 +62,9 @@ def draw_calendar():
 
     today = datetime.now()
 
-    # Создаем дни месяца
     for row_num, week in enumerate(cal, start=1):
         for col_num, day in enumerate(week):
 
-            # Пустые клетки
             if day == 0:
                 text = ""
             else:
@@ -85,20 +73,16 @@ def draw_calendar():
             bg_color = "#111827"
             fg_color = WHITE
 
-            # Суббота
             if col_num == 5:
                 fg_color = GREEN
 
-            # Воскресенье
             if col_num == 6:
                 fg_color = RED
 
-            # Праздники
             if (current_month, day) in holidays:
                 bg_color = HOLIDAY
                 fg_color = "black"
 
-            # Сегодняшний день
             if (
                 day == today.day and
                 current_month == today.month and
@@ -107,7 +91,6 @@ def draw_calendar():
                 bg_color = "#22c55e"
                 fg_color = "white"
 
-            # Ячейка дня
             label = tk.Label(
                 calendar_frame,
                 text=text,
@@ -127,19 +110,16 @@ def draw_calendar():
                 pady=2
             )
 
-            # Наведение мыши
             label.bind(
                 "<Enter>",
                 lambda e, l=label: l.config(bg="#334155")
             )
 
-            # Возвращаем цвет после наведения
             label.bind(
                 "<Leave>",
                 lambda e, l=label, d=day: reset_color(l, d)
             )
 
-            # Если праздник — показываем информацию
             if (current_month, day) in holidays:
                 holiday_name = holidays[(current_month, day)]
 
@@ -149,17 +129,13 @@ def draw_calendar():
                     show_holiday(h)
                 )
 
-# Возврат цвета клетки
 def reset_color(label, day):
-
-    # Если праздник
     if (current_month, day) in holidays:
         label.config(bg=HOLIDAY)
         return
 
     today = datetime.now()
 
-    # Если сегодняшний день
     if (
         day == today.day and
         current_month == today.month and
@@ -170,13 +146,11 @@ def reset_color(label, day):
     else:
         label.config(bg="#111827")
 
-# Показ информации о празднике
 def show_holiday(name):
     holiday_label.config(
         text=f"Сегодня праздник: {name}"
     )
 
-# Следующий месяц
 def next_month():
     global current_month, current_year
 
@@ -188,7 +162,6 @@ def next_month():
 
     draw_calendar()
 
-# Предыдущий месяц
 def prev_month():
     global current_month, current_year
 
@@ -200,7 +173,6 @@ def prev_month():
 
     draw_calendar()
 
-# Переход к текущему месяцу
 def today_month():
     global current_month, current_year
 
@@ -211,14 +183,12 @@ def today_month():
 
     draw_calendar()
 
-# Создаем окно
 root = tk.Tk()
 
 root.title("Интерактивный календарь")
 root.geometry("1000x760")
 root.config(bg=BG_COLOR)
 
-# Заголовок
 header = tk.Label(
     root,
     text="📅 Интерактивный календарь",
@@ -229,7 +199,6 @@ header = tk.Label(
 
 header.pack(pady=20)
 
-# Верхняя панель
 top_frame = tk.Frame(
     root,
     bg=BG_COLOR
@@ -237,7 +206,6 @@ top_frame = tk.Frame(
 
 top_frame.pack(pady=10)
 
-# Кнопка назад
 prev_button = tk.Button(
     top_frame,
     text="◀ Предыдущий",
@@ -253,7 +221,6 @@ prev_button = tk.Button(
 
 prev_button.grid(row=0, column=0, padx=20)
 
-# Текущий месяц
 title_label = tk.Label(
     top_frame,
     text="",
@@ -264,7 +231,6 @@ title_label = tk.Label(
 
 title_label.grid(row=0, column=1, padx=40)
 
-# Кнопка вперед
 next_button = tk.Button(
     top_frame,
     text="Следующий ▶",
@@ -280,7 +246,6 @@ next_button = tk.Button(
 
 next_button.grid(row=0, column=2, padx=20)
 
-# Фрейм календаря
 calendar_frame = tk.Frame(
     root,
     bg="#1f2937"
@@ -291,7 +256,6 @@ calendar_frame.pack(
     pady=20
 )
 
-# Нижняя панель
 bottom_frame = tk.Frame(
     root,
     bg=BG_COLOR
@@ -299,7 +263,6 @@ bottom_frame = tk.Frame(
 
 bottom_frame.pack(pady=10)
 
-# Кнопка "Сегодня"
 today_button = tk.Button(
     bottom_frame,
     text="📍 Сегодня",
@@ -315,7 +278,6 @@ today_button = tk.Button(
 
 today_button.grid(row=0, column=0, padx=10)
 
-# Информация о празднике
 holiday_label = tk.Label(
     root,
     text="Нажмите на праздничную дату",
@@ -325,9 +287,5 @@ holiday_label = tk.Label(
 )
 
 holiday_label.pack(pady=20)
-
-# Запуск календаря
 draw_calendar()
-
-# Запуск приложения
 root.mainloop()

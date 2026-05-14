@@ -429,6 +429,7 @@ root.mainloop()
 
 # Список использованных источников:
 
-1. [tkinter — Python interface to Tcl/Tk](https://docs.python.org/3/library/tkinter.html).
-2. [calendar — General calendar-related functions](https://docs.python.org/3/library/calendar.html).
-3. [datetime — Basic date and time types](https://docs.python.org/3/library/datetime.html).
+1. [Лабораторная работа №8](https://evil-teacher.orbiter.website/prog_pm/lab08/).
+2. [tkinter — Python interface to Tcl/Tk](https://docs.python.org/3/library/tkinter.html).
+3. [calendar — General calendar-related functions](https://docs.python.org/3/library/calendar.html).
+4. [datetime — Basic date and time types](https://docs.python.org/3/library/datetime.html).
